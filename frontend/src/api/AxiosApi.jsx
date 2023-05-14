@@ -73,6 +73,7 @@ AxiosApi.defaults.headers = {
 // Adding Authorization header for all requests
 AxiosApi.interceptors.request.use(
   async (config) => {
+    console.log("Intercepting request");
     if (
       config.url === "/user/api/v1/login/" ||
       config.url === "/user/api/v1/register/"

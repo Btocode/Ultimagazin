@@ -18,10 +18,6 @@ const Dashboard = () => {
   const [paginationUrl, setPaginationUrl] = useState("");
 
   useEffect(() => {
-    // reload the page
-    if (localStorage.getItem("authenticated") === null) {
-      window.location.reload();
-    }
 
     getreflinks(setLoading, paginationUrl).then((data) => {
       setreflinks(data);
